@@ -88,12 +88,27 @@ final File photo;
             ),
           ),
         ),
-        SizedBox(height: 400,),
-        Switch(
-            value: Provider.of<ThemeProvider>(context,listen: false).switchValue, onChanged:(b){
-          Provider.of<ThemeProvider>(context,listen: false).changeSwitchValue(b);
+        SizedBox(height: 18,),
+        Padding(
+          padding: const EdgeInsets.only(
+    right: 24
+    ),
+          child: ListTile(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+              topRight: Radius.circular(12)  ,
+              bottomRight       : Radius.circular(12)
+              )
+              ),
+            tileColor: AppColors.blue.withOpacity(0.1),
+            leading: Switch(
+                value: Provider.of<ThemeProvider>(context,listen: false).switchValue, onChanged:(b){
+              Provider.of<ThemeProvider>(context,listen: false).changeSwitchValue(b);
 
-        })
+            }),
+            title: Text("Dark or Light",style: TextStyle(color: AppColors.blue,fontSize: 16,fontWeight: FontWeight.w500)),
+          ),
+        )
       ],
     );
   }

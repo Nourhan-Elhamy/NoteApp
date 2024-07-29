@@ -9,7 +9,7 @@ final ThemeData lightThemeData = ThemeData(
     color: AppColors.black
   ),
   switchTheme: SwitchThemeData(
-      trackColor: MaterialStateProperty.all(AppColors.background),
+      trackColor: MaterialStateProperty.all(AppColors.blue),
     thumbColor: MaterialStateProperty.all(AppColors.white)
   ),
   appBarTheme: AppBarTheme(
